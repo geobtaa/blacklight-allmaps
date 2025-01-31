@@ -1,17 +1,20 @@
 <div class="card mb-3 mt-3" id="allmaps-sidebar" data-document-id="<%= @document.id %>" data-iiif-manifest="<%= @document.iiif_manifest_url %>">
   <div class="card-header">
-    <h2 class="mb-0 h6"><%= t('home.georeferencing') %></h2>
+    <h2 class="mb-0 h6">Map Overlay</h2>
   </div>
 
   <div class="card-body" id="georeferencing">
     <% if @document.sidecar_allmaps.georeferenced? %>
       <div id="georef_present">
-        <%= link_to t('allmaps.georeferenced_link'), 'https://viewer.allmaps.org/?url=https://annotations.allmaps.org/?url=' + @document.iiif_manifest_url, target: '_blank' %>
+        <ul>
+          <li><%= link_to "View Allmaps georeferenced Map overlay", 'https://viewer.allmaps.org/?url=https://annotations.allmaps.org/?url=' + @document.iiif_manifest_url, target: '_blank' %></li> 
+          <li><%= link_to "Edit Allmaps georeferenced Map overlay", 'https://editor.allmaps.org/#/collection?url=' + @document.iiif_manifest_url, target: '_blank' %></li>
+        </ul>
       </div>
     <% else %>    
       <%# content will be updated via updateGeorefLinks(); %>
       <div id="georef_loading">
-        <%= t('allmaps.loading') %>
+        Create georeferenced map overlay with Allmaps
       </div>
     <% end %>
   </div>
