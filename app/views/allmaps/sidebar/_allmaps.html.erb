@@ -7,8 +7,8 @@
     <% if @document.sidecar_allmaps.georeferenced? %>
       <div id="georef_present">
         <ul>
-          <li><%= link_to "View Allmaps georeferenced Map overlay", 'https://viewer.allmaps.org/?url=https://annotations.allmaps.org/?url=' + @document.iiif_manifest_url, target: '_blank' %></li> 
-          <li><%= link_to "Edit Allmaps georeferenced Map overlay", 'https://editor.allmaps.org/#/collection?url=' + @document.iiif_manifest_url, target: '_blank' %></li>
+          <li><%= link_to "View within the Allmaps viewer", 'https://viewer.allmaps.org/?url=https://annotations.allmaps.org/?url=' + @document.iiif_manifest_url, target: '_blank' %></li> 
+          <li><%= link_to "Edit map control points with Allmaps editor", 'https://editor.allmaps.org/#/collection?url=' + @document.iiif_manifest_url, target: '_blank' %></li>
         </ul>
       </div>
     <% else %>    

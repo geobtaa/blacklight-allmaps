@@ -29,8 +29,8 @@ export const updateGeorefLinks = async () => {
         const annotationUrl = response.url;
         georefDiv.innerHTML = `
           <ul>
-            <li><a href="https://viewer.allmaps.org/?url=${annotationUrl}" target="_blank">View Allmaps georeferenced Map overlay</a></li>
-            <li><a href="https://editor.allmaps.org/#/collection?url=${manifestUrl}" target="_blank">Edit Allmaps georeferenced Map overlay</a></li>
+            <li><a href="https://viewer.allmaps.org/?url=${annotationUrl}" target="_blank">View within the Allmaps viewer</a></li>
+            <li><a href="https://editor.allmaps.org/#/collection?url=${manifestUrl}" target="_blank">Edit map control points with Allmaps editor</a></li>
           </ul>
         `;
       }
